@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+
+  docker-postgres:
+    container_name: docker-postgres
+    image: signo/docker-postgres:12-alpine3.12
+    build:
+      context: ./12/
+      dockerfile: ./Dockerfile
+    logging:
+      options:
+        max-size: 256m
